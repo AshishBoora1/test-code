@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  list-style-type: none !important;
+  text-decoration: none !important;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg_img {
+  background-image: url(./images/png/main_bg.jpg);
+}
+
+a::after {
+  animation: slide-out 1s forwards;
+}
+
+a:hover::after {
+  animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+  from {
+    width: 0;
+    left: 0;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    width: 100%;
+    left: 0;
+  }
+  to {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .height_calc_lg {
+    height: calc(100vh - 80px) !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 23, 23, 0.58);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.image-scale {
+  transition: transform 0.3s ease; /* Smooth transition for the scale */
+}
+
+.hover-scale:hover .image-scale {
+  transform: scale(1.05); /* Scale up the image only */
+}
+
+.btn_border {
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    150deg,
+    #3cff00 -3.12%,
+    rgba(51, 51, 51, 0) 48.41%,
+    #3cff00 100%
+  );
+  border-image-slice: 1;
+}
+
+@media (max-width: 991px) {
+  .remove_style {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: auto !important;
+    position: static !important;
+    transform: translate(0px, 0px) !important;
+  }
+  .pin-spacer {
+    /* width: 743px !important; */
+    height: auto !important;
+    max-height: auto !important;
+    padding: 0 !important;
+  }
+}
+
+.pin-spacer {
+  padding: 0 !important;
+}
