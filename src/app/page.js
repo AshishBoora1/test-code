@@ -2,8 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import manimg from "./images/png/man_img.png";
-import header_img from "./images/svg/header_img.svg";
-import client_image from "./images/png/client_image.png";
+import man_img from "./images/png/man_img.png";
 import message_image from "./images/png/message_image.png";
 import Cone from "./images/svg/Cone.svg";
 import green_arrow from "./images/svg/green_arrow.svg";
@@ -150,7 +149,7 @@ export default function Home() {
                       <HeaderArrow />
                     </div>
                     <Image
-                      src={header_img}
+                      src={man_img}
                       priority={false}
                       alt="manimg"
                       className=" w-full"
