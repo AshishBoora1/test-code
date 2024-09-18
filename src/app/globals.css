@@ -11,7 +11,7 @@
 @tailwind utilities;
 
 .bg_img {
-  background-image: url(./images/png/main_bg_convert.png);
+  background-image: url(./images/png/main_bg_convert.webp);
 }
 
 a::after {
